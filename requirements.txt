@@ -1,3 +1,5 @@
 hearthstone==5.3.0
 hearthstone-data==29349.1
 hslog==1.5.1
+numpy==1.16.2
+pytest==4.3.1
