@@ -1,0 +1,3 @@
+hearthstone
+hslog
+hearthstone_data
