@@ -46,7 +46,6 @@ def test_leeroy():
     6, #attack
     2, #hp
     5, #cost
-    0, #adapt
     1, #battlecry
     0, #casts when drawn
     1, #charge
