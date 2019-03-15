@@ -38,7 +38,6 @@ class Converter(object):
         0, #mega-windfury
         0, #overkill
         int(cls.db[entity_id].overload),
-        0, #passive
         int(cls.db[entity_id].poisonous),
         int(cls.db[entity_id].quest),
         0, #recruit
