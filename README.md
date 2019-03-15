@@ -2,7 +2,7 @@
 Parsing card entity string into fixed length vector representation.
 
 # How are cards represented?
-See below test-case with [`Leeroy Jenkins` from](https://hearthstone.gamepedia.com/Leeroy_Jenkins) [Hearthstone API](https://hearthstoneapi.com/cards) for an example:
+See below test-case with [`Leeroy Jenkins`](https://hearthstone.gamepedia.com/Leeroy_Jenkins) from [Hearthstone API](https://hearthstoneapi.com/cards) for an example:
 
   ID | Name | Set | Type|Cost|Atk|HP|Db|Armor
   ---|---|---|---|---|---|---|---|---
