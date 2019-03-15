@@ -86,5 +86,5 @@ def test_leeroy():
       0, #pirate
       0, #totem
     ])
-  ).all
+  ).all()
 ```
