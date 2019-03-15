@@ -192,20 +192,20 @@ def test_druid_of_the_claw():
     ])
   ).all()
 
-def test_branching_paths():
-  card_id = "LOOT_054"
+def test_si7_agent():
+  card_id = "EX1_134"
   assert (
     Converter.convert(card_id) == np.array([
-      0, #attack
-      0, #hp
-      4, #cost
+      3, #attack
+      3, #hp
+      3, #cost
       0, #adapt
       0, #battlecry
       0, #casts when drawn
       0, #charge
       0, #choose one
-      1, #choose twice
-      0, #combo
+      0, #choose twice
+      1, #combo
       0, #counter
       0, #deathrattle
       0, #discover
