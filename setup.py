@@ -3,7 +3,7 @@ with open("README.md", "r") as f:
   long_description = f.read()
 setuptools.setup(
   name="hearthstone-parsing-converter-v3nd3774",
-  version="0.0.1",
+  version="0.0.3",
   author="Josue Caraballo",
   author_email="josue.caraballo@gmail.com",
   description="Converting hearthstone entity strings into fixed length vectors!",
@@ -14,6 +14,6 @@ setuptools.setup(
   classifiers=[
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
-    "Operating System :: Developed on Windows 10",
+    "Operating System :: OS Independent",
   ]
 )

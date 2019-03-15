@@ -1,3 +1,29 @@
+# How to uninstall?
+```
+pip uninstall hearthstone-parsing-converter-v3nd3774
+```
+
+# How to install?
+Since this is a `WIP`, this is on [Test PyPi](https://test.pypi.org/project/hearthstone-parsing-converter-v3nd3774/) right now. To install:
+```
+pip install -i https://test.pypi.org/simple/ hearthstone-parsing-converter-v3nd3774
+```
+Then you should be able to run the tests and use it with `py.test`.
+
+# How to build and put on twine?
+Add this to your `~/.pypirc`:
+```
+[distutils]
+index-servers=
+    testpypi
+
+[testpypi]
+repository: https://test.pypi.org/legacy/
+username: YOUR_USER_HERE
+```
+Then run `./build_and_upload.sh`
+
+
 # HearthstoneParsing
 Parsing card entity string into fixed length vector representation.
 
