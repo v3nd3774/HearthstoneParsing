@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/v3nd3774/HearthstoneParsing.svg?branch=master)](https://travis-ci.org/v3nd3774/HearthstoneParsing)
 # How to uninstall?
 ```
 pip uninstall hearthstone-parsing-converter-v3nd3774
@@ -89,4 +90,3 @@ def test_leeroy():
     ])
   ).all()
 ```
-
