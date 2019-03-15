@@ -24,8 +24,8 @@ class Converter(object):
         int("<b>Charge</b>" in cls.db[entity_id].description and not choose_one_regex_match),
         int(bool(choose_one_regex_match)),
         int(bool(choose_two_regex_match)),
-        int("<b>Combo:</b>" in cls.db[entity_id].description and not choose_one_regex_match),
-        0, #counter
+        int("<b>Combo:</b>" in cls.db[entity_id].description),
+        int("<b>Counter</b>" in cls.db[entity_id].description),
         int(cls.db[entity_id].deathrattle),
         int(cls.db[entity_id].discover),
         int(cls.db[entity_id].divine_shield),
