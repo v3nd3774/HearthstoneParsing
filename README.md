@@ -67,7 +67,6 @@ def test_leeroy():
       0, #mega-windfury
       0, #overkill
       0, #overload
-      0, #passive
       0, #poisonous
       0, #quest
       0, #recruit
