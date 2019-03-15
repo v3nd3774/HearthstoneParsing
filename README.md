@@ -1,4 +1,8 @@
 [![Build Status](https://travis-ci.org/v3nd3774/HearthstoneParsing.svg?branch=master)](https://travis-ci.org/v3nd3774/HearthstoneParsing)
+
+# Can I see the CI status?
+Sure, just click the badge up above or [this hyperlink.](https://travis-ci.org/v3nd3774/HearthstoneParsing)
+
 # How to uninstall?
 ```
 pip uninstall hearthstone-parsing-converter-v3nd3774
@@ -90,3 +94,4 @@ def test_leeroy():
     ])
   ).all()
 ```
+
