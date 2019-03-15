@@ -2,17 +2,17 @@
 Parsing card entity string into fixed length vector representation.
 
 # How are cards represented?
-See below test-case with `Leeroy Jenkins` from [Hearthstone API](https://hearthstoneapi.com/cards) for an example:
+See below test-case with [`Leeroy Jenkins` from](https://hearthstone.gamepedia.com/Leeroy_Jenkins) [Hearthstone API](https://hearthstoneapi.com/cards) for an example:
 
-  ID|Name|Set|Type|Cost|Atk|HP|Db|Armor
-  ------------------------------------
+  ID | Name | Set | Type|Cost|Atk|HP|Db|Armor
+  ---|---|---|---|---|---|---|---|---
   EX1_116|Leeroy Jenkins|Classic|Minion|Cost 5|Attack 6|Health 2|
 
 ```
 def test_leeroy():
   card_id = "EX1_116"
   assert Converter.convert(card_id) == np.array([
-    6, #attach
+    6, #attack
     2, #hp
     5, #cost
     0, #adapt
