@@ -35,16 +35,16 @@ class Converter(object):
         int(cls.db[entity_id].inspire),
         int("<b>Lifesteal</b>" in cls.db[entity_id].description),
         int("<b>Magnetic</b>" in cls.db[entity_id].description),
-        0, #mega-windfury
-        0, #overkill
+        int("<b>Mega-Windfury</b>" in cls.db[entity_id].description),
+        int("<b>Overkill:</b>" in cls.db[entity_id].description),
         int(cls.db[entity_id].overload),
         int(cls.db[entity_id].poisonous),
         int(cls.db[entity_id].quest),
-        0, #recruit
+        int("<b>Recruit</b>" in cls.db[entity_id].description),
         int(cls.db[entity_id].rush),
         int(cls.db[entity_id].secret),
-        0, #silence
-        0, #start of game
+        int("<b>Silence</b>" in cls.db[entity_id].description),
+        int("<b>Start of Game:</b>" in cls.db[entity_id].description),
         int(cls.db[entity_id].taunt),
         int(cls.db[entity_id].windfury), # LAST ABILITY
         int(cls.db[entity_id].race == Race.BEAST), # first race
