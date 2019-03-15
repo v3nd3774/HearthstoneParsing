@@ -11,10 +11,10 @@ class Converter(object):
         cls.db[entity_id].atk,
         cls.db[entity_id].health,
         cls.db[entity_id].cost,
-        0, #adapt FIRST ABILITY
+        int("<b>Adapt</b>" in cls.db[entity_id].description),
         int(cls.db[entity_id].battlecry),
         0, #casts when drawn
-        1, #charge
+        int("<b>Charge</b>" in cls.db[entity_id].description),
         0, #choose one
         0, #choose twice
         0, #combo
