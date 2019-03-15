@@ -10,6 +10,11 @@ pip install -i https://test.pypi.org/simple/ hearthstone-parsing-converter-v3nd3
 ```
 Then you should be able to run the tests and use it with `py.test`.
 
+If you're iterating locally, then use:
+```
+build_and_local_install.sh
+```
+
 # How to build and put on twine?
 Add this to your `~/.pypirc`:
 ```
