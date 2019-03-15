@@ -30,7 +30,7 @@ class Converter(object):
         int(cls.db[entity_id].discover),
         int(cls.db[entity_id].divine_shield),
         int(cls.db[entity_id].echo),
-        0, #freeze
+        int("<b>Freeze</b>" in cls.db[entity_id].description),
         int(cls.db[entity_id].immune),
         int(cls.db[entity_id].inspire),
         0, #lifesteal

@@ -328,7 +328,7 @@ def test_water_elemental():
       0, #beast
       0, #demon
       0, #dragon
-      0, #elemental
+      1, #elemental
       0, #mech
       0, #murloc
       0, #pirate
