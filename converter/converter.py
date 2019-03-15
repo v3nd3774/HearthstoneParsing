@@ -1,3 +1,4 @@
+import re
 import numpy as np
 from hearthstone import cardxml
 from hearthstone.enums import Race
@@ -6,6 +7,9 @@ class Converter(object):
   def convert(cls, entity_id):
     if not hasattr(cls, "db"):
       cls.db, _ = cardxml.load()
+    if not hasattr(cls, "choose_one_regex"):
+      cls.choose_one_regex = re.compile(r".*?<b>Choose One -<\/b>(.*?);\n(.+)",  re.DOTALL)
+    choose_one_regex_match = cls.choose_one_regex.match(cls.db[entity_id].description)
     if entity_id in cls.db:
       return np.array([
         cls.db[entity_id].atk,
@@ -14,8 +18,8 @@ class Converter(object):
         int("<b>Adapt</b>" in cls.db[entity_id].description),
         int(cls.db[entity_id].battlecry),
         int("<b>Casts When Drawn</b>" in cls.db[entity_id].description),
-        int("<b>Charge</b>" in cls.db[entity_id].description),
-        0, #choose one
+        int("<b>Charge</b>" in cls.db[entity_id].description and not choose_one_regex_match),
+        int(bool(choose_one_regex_match)),
         0, #choose twice
         0, #combo
         0, #counter
