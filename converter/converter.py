@@ -34,7 +34,7 @@ class Converter(object):
         int(cls.db[entity_id].immune),
         int(cls.db[entity_id].inspire),
         int("<b>Lifesteal</b>" in cls.db[entity_id].description),
-        0, #magnetic
+        int("<b>Magnetic</b>" in cls.db[entity_id].description),
         0, #mega-windfury
         0, #overkill
         int(cls.db[entity_id].overload),
@@ -52,7 +52,7 @@ class Converter(object):
         int(cls.db[entity_id].race == Race.DEMON),
         int(cls.db[entity_id].race == Race.DRAGON),
         int(cls.db[entity_id].race == Race.ELEMENTAL),
-        0, # race is a MECH
+        int(cls.db[entity_id].race == Race.MECHANICAL),
         int(cls.db[entity_id].race == Race.MURLOC),
         int(cls.db[entity_id].race == Race.PIRATE),
         int(cls.db[entity_id].race == Race.TOTEM)
