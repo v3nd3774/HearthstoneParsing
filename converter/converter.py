@@ -13,7 +13,7 @@ class Converter(object):
         cls.db[entity_id].cost,
         int("<b>Adapt</b>" in cls.db[entity_id].description),
         int(cls.db[entity_id].battlecry),
-        0, #casts when drawn
+        int("<b>Casts When Drawn</b>" in cls.db[entity_id].description),
         int("<b>Charge</b>" in cls.db[entity_id].description),
         0, #choose one
         0, #choose twice
