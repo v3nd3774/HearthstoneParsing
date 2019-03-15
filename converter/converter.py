@@ -9,7 +9,10 @@ class Converter(object):
       cls.db, _ = cardxml.load()
     if not hasattr(cls, "choose_one_regex"):
       cls.choose_one_regex = re.compile(r".*?<b>Choose One -<\/b>(.*?);\n(.+)",  re.DOTALL)
+    if not hasattr(cls, "choose_two_regex"):
+      cls.choose_two_regex = re.compile(r".*?<b>Choose Twice -</b>(.*?);(.*?);(.*?)$",  re.DOTALL)
     choose_one_regex_match = cls.choose_one_regex.match(cls.db[entity_id].description)
+    choose_two_regex_match = cls.choose_two_regex.match(cls.db[entity_id].description)
     if entity_id in cls.db:
       return np.array([
         cls.db[entity_id].atk,
@@ -20,7 +23,7 @@ class Converter(object):
         int("<b>Casts When Drawn</b>" in cls.db[entity_id].description),
         int("<b>Charge</b>" in cls.db[entity_id].description and not choose_one_regex_match),
         int(bool(choose_one_regex_match)),
-        0, #choose twice
+        int(bool(choose_two_regex_match)),
         0, #combo
         0, #counter
         int(cls.db[entity_id].deathrattle),
