@@ -33,7 +33,7 @@ class Converter(object):
         int("<b>Freeze</b>" in cls.db[entity_id].description),
         int(cls.db[entity_id].immune),
         int(cls.db[entity_id].inspire),
-        0, #lifesteal
+        int("<b>Lifesteal</b>" in cls.db[entity_id].description),
         0, #magnetic
         0, #mega-windfury
         0, #overkill
