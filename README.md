@@ -33,6 +33,8 @@ Then run `./build_and_upload.sh`
 Parsing card entity string into fixed length vector representation.
 
 # How are cards represented?
+See what cars are tested [here](https://github.com/v3nd3774/HearthstoneParsing/tree/master/tests).
+
 See below test-case with [`Leeroy Jenkins`](https://hearthstone.gamepedia.com/Leeroy_Jenkins) from [Hearthstone API](https://hearthstoneapi.com/cards) for an example:
 
   ID | Name | Set | Type|Cost|Atk|HP|Db|Armor
