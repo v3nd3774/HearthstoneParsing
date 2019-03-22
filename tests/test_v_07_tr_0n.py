@@ -45,5 +45,6 @@ def test_v_07_tr_0n():
       0, #murloc
       0, #pirate
       0, #totem
+      0  #spell
     ])
   ).all()

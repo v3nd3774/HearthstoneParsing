@@ -45,5 +45,6 @@ def test_counterspell():
       0, #murloc
       0, #pirate
       0, #totem
+      1  #spell
     ])
   ).all()
