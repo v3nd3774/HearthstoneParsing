@@ -47,17 +47,17 @@ See below test-case with [`Leeroy Jenkins`](https://hearthstone.gamepedia.com/Le
   EX1_116|Leeroy Jenkins|Classic|Minion|Cost 5|Attack 6|Health 2|
 
 ```
-def test_leeroy():
-  card_id = "EX1_116"
+def test_water_elemental():
+  card_id = "CS2_033"
   assert (
     Converter.convert(card_id) == np.array([
-      6, #attack
-      2, #hp
-      5, #cost
+      3, #attack
+      6, #hp
+      4, #cost
       0, #adapt
-      1, #battlecry
+      0, #battlecry
       0, #casts when drawn
-      1, #charge
+      0, #charge
       0, #choose one
       0, #choose twice
       0, #combo
@@ -66,7 +66,7 @@ def test_leeroy():
       0, #discover
       0, #divine shield
       0, #echo
-      0, #freeze
+      1, #freeze
       0, #immune
       0, #inspire
       0, #lifesteal
@@ -86,12 +86,12 @@ def test_leeroy():
       0, #beast
       0, #demon
       0, #dragon
-      0, #elemental
+      1, #elemental
       0, #mech
       0, #murloc
       0, #pirate
       0, #totem
+      0  #spell
     ])
   ).all()
 ```
-
