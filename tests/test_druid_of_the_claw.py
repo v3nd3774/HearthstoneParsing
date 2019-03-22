@@ -45,5 +45,6 @@ def test_druid_of_the_claw():
       0, #murloc
       0, #pirate
       0, #totem
+      0  #spell
     ])
   ).all()

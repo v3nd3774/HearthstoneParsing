@@ -1,7 +1,7 @@
 import re
 import numpy as np
 from hearthstone import cardxml
-from hearthstone.enums import Race
+from hearthstone.enums import CardType, Race
 class Converter(object):
   @classmethod
   def convert(cls, entity_id):
@@ -54,7 +54,8 @@ class Converter(object):
         int(cls.db[entity_id].race == Race.MECHANICAL),
         int(cls.db[entity_id].race == Race.MURLOC),
         int(cls.db[entity_id].race == Race.PIRATE),
-        int(cls.db[entity_id].race == Race.TOTEM)
+        int(cls.db[entity_id].race == Race.TOTEM),
+        int(cls.db[entity_id].type == CardType.SPELL)
       ])
     else:
       raise ValueError("The following ID is not in the database: %s" % entity_id)
